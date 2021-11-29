@@ -52,8 +52,4 @@ $warning = checkSession();
 	</div>
 	<?php require_once("./assets/footer.html"); ?>
 </body>
-
 </html>
-
-
-?>

@@ -3,9 +3,15 @@
 class Controller
 {
 
-    public function __construct()
+    protected $view;
+    protected $model;
+
+     function __construct()
     {
-        $view = new View();
-        $session = new Session();
+        $this->view = new View;
+    }
+
+    function loadModel($name){
+        
     }
 }

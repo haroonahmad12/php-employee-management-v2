@@ -1,9 +1,10 @@
 <?php
-require_once();
+require_once('./config/constants.php');
 function conn()
 {
   try {
-    $connection = "mysql:host=" . HOST . ";"
+    $connection =
+      "mysql:host=" . HOST . ";"
       . "dbname=" . DB . ";"
       . "charset=" . CHARSET . ";";
 

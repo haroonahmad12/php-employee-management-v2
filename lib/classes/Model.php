@@ -1,5 +1,4 @@
 <?php
-//require_once("lib/database.php");
 
 class Model
 {

@@ -1,7 +1,6 @@
 <!-- TODO Application entry point. Login view -->
-<?php
-require_once("./src/library/sessionHelper.php");
-require_once("./lib/classes");
+<?php require_once("./src/library/sessionHelper.php");
+//require_once("./lib/classes");
 $warning = checkSession();
 ?>
 <!DOCTYPE html>
@@ -53,4 +52,5 @@ $warning = checkSession();
 	</div>
 	<?php require_once("./assets/footer.html"); ?>
 </body>
+
 </html>

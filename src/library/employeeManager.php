@@ -56,7 +56,6 @@ function updateEmployee(array $updateEmployee) {
 	}
 // TODO implement it
 	echo print_r($employeeArray);
-
 }
 
 

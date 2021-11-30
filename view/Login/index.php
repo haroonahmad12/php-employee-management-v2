@@ -23,7 +23,7 @@
     <main class="container d-flex align-items-center justify-content-around">
         <div>
             <h3 class="mb-4">Please Log in</h3>
-            <form action="./src/library/loginController.php" method="POST" class="form">
+            <form action="php-employee-management-v2/url=controllers/loginController.php" method="POST" class="form">
                 <div>
                     <input name="email" type="email" id="email" placeholder="Email" required></input>
                 </div>

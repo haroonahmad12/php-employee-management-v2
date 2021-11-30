@@ -13,6 +13,7 @@ require_once("src/classes/Model.php");
 require_once("src/classes/View.php");
 
 
+require_once("src/models/helpers/lib/database.php");
 require_once("src/controllers/SessionController.php");
 require_once("src/controllers/LoginController.php");
 require_once("src/controllers/EmployeeController.php");

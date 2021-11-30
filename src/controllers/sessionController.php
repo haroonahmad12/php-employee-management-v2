@@ -11,9 +11,13 @@ class SessionController extends Controller
     function checkSession()
     {
         if (!isset($_SESSION["email"])) {
-            header("Location: src/controllers/LoginController/render");
+
+            $this->view->loadLayout("Login");
+
+            exit();
         } else {
-            header("Location: src/controllers/EmployeeController/render");
+            $this->view->loadLayout("Employees");
+            exit();
         }
     }
 }

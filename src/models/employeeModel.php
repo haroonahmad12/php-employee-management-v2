@@ -1,6 +1,4 @@
 <?php
-require_once("../lib/classes/Model.php");
-
 class EmployeeModel extends Model
 {
     public function dumpStuff()

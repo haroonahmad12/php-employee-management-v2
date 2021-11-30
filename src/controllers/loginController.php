@@ -9,7 +9,6 @@ class LoginController extends Controller
 
     function __construct()
     {
-
         parent::__construct();
         $this->loadModel("Login");
     }
@@ -18,12 +17,11 @@ class LoginController extends Controller
     {
         $this->view->loadLayout("Login");
     }
-
+    
     function authUser()
     {
         $email = $_POST["email"];
         $pass = $_POST["pass"];
-
         $this->model->verifyUser($email, $pass);
     }
 }

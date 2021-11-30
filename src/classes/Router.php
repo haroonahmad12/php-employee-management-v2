@@ -7,6 +7,10 @@ class Router
 {
     public function __construct()
     {
+        $session = new SessionController();
+        //$session->checkSession();
+
+
         $url = isset($_GET['url']) ? $_GET['url'] : null;
 
         $url = rtrim($url, '/');

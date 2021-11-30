@@ -7,23 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Employees</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,400" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
-    <script src="../../js/index.js" defer></script>
-    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" type="text/css" media="all">
+    <script src="assets/js/index.js" defer></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" type="text/css" media="all">
 </head>
 
 </html>
 
 <body>
-    <?php require_once("../../assets/header.html"); ?>
+    <?php require_once("assets/header.html"); ?>
     <main class="container d-flex align-items-center justify-content-around">
         <div>
             <h3 class="mb-4">Please Log in</h3>
-            <form action="./src/library/loginController.php" method="POST" class="form">
+            <form action="../../controllers/loginController.php" method="POST" class="form">
                 <div>
                     <input name="email" type="email" id="email" placeholder="Email" required></input>
                 </div>
@@ -45,7 +45,7 @@
     </main>
     <div>
     </div>
-    <?php require_once("../../assets/footer.html"); ?>
+    <?php require_once("assets/footer.html"); ?>
 </body>
 
 </html>

@@ -5,6 +5,9 @@ class Router
     public function __construct()
     {
         $url = isset($_GET['url']) ? $_GET['url'] : null;
+
+        echo $url;
+
         $url = rtrim($url, '/');
         $url = explode('/', $url);
 
@@ -16,8 +19,7 @@ class Router
         //After instanciate the controller we check if the user is logged in
         $session = new SessionController();
         $session->checkSession(isset($url[0]) ? $url[0] : null, isset($url[1]) ? $url[1] : null);
-        echo $controller_file;
-        echo $controller;
+
         if (file_exists($controller_file)) {
             require_once $controller_file;
             $controller = new $controller;
@@ -30,11 +32,11 @@ class Router
                         $controller->{$url[1]}();
                     }
                 } else {
-                    //$errorController->showError("This action doesn't exist");
+                    // $errorController->showError("This action doesn't exist");
                 }
             }
         } else {
-            //$errorController->showError("This page doesn't exist");
+            // $errorController->showError("This page doesn't exist");
         }
     }
 }

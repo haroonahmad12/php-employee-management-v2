@@ -17,8 +17,8 @@ class Router
 
         //$errorController = new ErrorController;
         //After instanciate the controller we check if the user is logged in
-        $session = new SessionController();
-        $session->checkSession();
+        // $session = new SessionController();
+        // $session->checkSession();
 
         if (file_exists($controller_file)) {
             require_once $controller_file;

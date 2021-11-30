@@ -10,6 +10,8 @@ class LoginModel extends Model
         if ($email === $users[0]["email"] && $pass === $users[0]["password"]){
             session_start();
             $_SESSION["email"]= $email;
+
+            header("Location: ./controllers/employeeController");
         }
 
     }

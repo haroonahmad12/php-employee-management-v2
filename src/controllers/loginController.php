@@ -23,5 +23,6 @@ class LoginController extends Controller
         $email = $_POST["email"];
         $pass = $_POST["pass"];
         $this->model->verifyUser($email, $pass);
+
     }
 }

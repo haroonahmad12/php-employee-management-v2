@@ -23,7 +23,7 @@
     <main class="container d-flex align-items-center justify-content-around">
         <div>
             <h3 class="mb-4">Please Log in</h3>
-            <form action="LoginController/authUser" method="POST" class="form">
+            <form action="src/controllers/LoginController/authUser" method="POST" class="form">
                 <div>
                     <input name="email" type="email" id="email" placeholder="Email" required></input>
                 </div>

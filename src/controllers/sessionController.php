@@ -11,13 +11,10 @@ class SessionController extends Controller
     function checkSession()
     {
         if (!isset($_SESSION["email"])) {
-
+            echo "Session not set";
             $this->view->loadLayout("Login");
-
-            exit();
         } else {
-            $this->view->loadLayout("Employees");
-            exit();
+            echo "it is set";
         }
     }
 }

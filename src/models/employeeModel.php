@@ -1,12 +1,11 @@
 <?php
 class EmployeeModel extends Model
 {
-    public function dumpStuff()
+    public function getAllEmployees()
     {
         return parent::get("SELECT * FROM employees;");
     }
 }
-
 $emp = new EmployeeModel();
 
 

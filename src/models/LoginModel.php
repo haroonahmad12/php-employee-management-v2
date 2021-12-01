@@ -3,7 +3,7 @@ class LoginModel extends Model
 {
     function verifyUser($email, $pass)
     {
-        echo "checking";
+
         $users = parent::get("SELECT * FROM users");
 
 

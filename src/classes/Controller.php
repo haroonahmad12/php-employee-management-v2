@@ -13,7 +13,6 @@ class Controller
 
     function loadModel($name)
     {
-
         require_once("src/models/{$name}Model.php");
 
         $name = ucfirst(strtolower($name));

@@ -1,7 +1,4 @@
 <?php
-require_once("src/controllers/SessionController.php");
-require_once("src/controllers/LoginController.php");
-require_once("src/controllers/EmployeeController.php");
 
 class Router
 {
@@ -13,13 +10,15 @@ class Router
 
         $url = isset($_GET['url']) ? $_GET['url'] : null;
 
-        var_dump($url);
+        
 
         $url = rtrim($url, '/');
         $url = explode('/', $url);
 
-        $controller_file =  CONTROLLERS . "$url[2]" . ".php";
-        $controller = $url[2];
+
+
+        $controller_file =  CONTROLLERS . "$url[0]" . ".php";
+        $controller = $url[0];
 
         //$errorController = new ErrorController;
         //After instanciate the controller we check if the user is logged in
@@ -30,12 +29,12 @@ class Router
             require_once $controller_file;
             $controller = new $controller;
 
-            if (isset($url[3])) {
-                if (method_exists($controller, $url[3])) {
-                    if (isset($url[4])) {
-                        $controller->{$url[3]}($url[4]);
+            if (isset($url[1])) {
+                if (method_exists($controller, $url[1])) {
+                    if (isset($url[2])) {
+                        $controller->{$url[1]}($url[2]);
                     } else {
-                        $controller->{$url[3]}();
+                        $controller->{$url[1]}();
                     }
                 } else {
                     // $errorController->showError("This action doesn't exist");

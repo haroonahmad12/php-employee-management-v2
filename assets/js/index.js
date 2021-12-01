@@ -1,7 +1,7 @@
 $("#jsGrid").jsGrid({
   width: "100%",
-  filtering: true,
-  editing: true,
+  filtering: false,
+  editing: false,
   inserting: true,
   sorting: true,
   paging: true,
@@ -9,21 +9,29 @@ $("#jsGrid").jsGrid({
   pageSize: 15,
   pageButtonCount: 5,
   controller: {
-    loadData: function (filter) {
-      return $.ajax({
-        type: "GET",
-        url: "../src/controllers/employeeController.php",
-        data: filter,
-        success: function (response) {
-          console.log("GET: ", response);
-        },
+    loadData: function (item) {
+      const d = $.Deferred();
+      $.ajax({
+          type: "GET",
+          url: "../employeeController/request",
+          dataType: "json",
+          data: item,
+          success: function (response) {
+            
+              d.resolve(response);
+          },
+          error: function (xhr, exception) {
+              console.log(`Error: La query está mal.`);
+          },
       });
-    },
+      return d.promise();
+
+  },
     insertItem: function (item) {
       return $.ajax({
         type: "POST",
-        url: "../src/library/employeeController.php",
-        data: { newEmployee: item },
+        url: "../employeeController/addNewEmployee",
+        data: item,
         success: function (response) {
           console.log("POST: ", response);
         },
@@ -56,16 +64,16 @@ $("#jsGrid").jsGrid({
     { name: "name", type: "text", width: 80, title: "Name" },
     { name: "email", type: "text", width: 100, title: "Email" },
     { name: "age", type: "number", width: 50, title: "Age" },
-    { name: "streetAddress", type: "text", width: 50, title: "Street No." },
+    { name: "street_no", type: "text", width: 50, title: "Street No." },
     { name: "city", type: "text", width: 100, title: "City" },
-    { name: "state", type: "text", width: 50, title: "Phone State" },
+    { name: "state", type: "text", width: 50, title: "State" },
     {
-      name: "postalCode",
+      name: "postal_code",
       type: "text",
       width: 150,
-      title: "Phone Postal Code",
+      title: "Postal Code",
     },
-    { name: "phoneNumber", type: "text", width: 150, title: "Phone Number" },
+    { name: "phone_number", type: "text", width: 150, title: "Phone Number" },
 
     { type: "control" },
   ],

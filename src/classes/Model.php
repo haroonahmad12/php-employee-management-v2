@@ -6,7 +6,7 @@ class Model
         $query = conn()->prepare($query);
 
         try {
-            $query->execute($params = []);
+            $query->execute($params);
             $employees = $query->fetchAll();
             return $employees;
         } catch (PDOException $e) {

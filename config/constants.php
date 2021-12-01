@@ -11,5 +11,10 @@ define("VIEWS", BASE_PATH . '/src/view/');
 //MODELS
 define("MODELS", BASE_PATH . '/src/models/');
 
+//CLASSES
+
+define("CLASSES", BASE_PATH . "/src/classes/");
+
 //RESOURCES
-define("RESOURCES", BASE_PATH . '/resources/');
+define("ASSETS", BASE_PATH . '/assets/');
+

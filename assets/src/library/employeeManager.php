@@ -50,7 +50,7 @@ function deleteEmployee(string $id) {
 
 function updateEmployee(array $updateEmployee) {
 	$employeeArray = json_decode(file_get_contents("../../resources/employees.json"));
-	 $id = 0;
+	$id = 0;
 	foreach($employeeArray as $employee) {
 		$id ++;
 	}

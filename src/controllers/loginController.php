@@ -17,12 +17,13 @@ class LoginController extends Controller
     {
         $this->view->loadLayout("Login");
     }
-    
+
     function authUser()
     {
         $email = $_POST["email"];
         $pass = $_POST["pass"];
-        $this->model->verifyUser($email, $pass);
 
+        echo $email;
+        $this->model->verifyUser($email, $pass);
     }
 }

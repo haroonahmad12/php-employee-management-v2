@@ -14,7 +14,7 @@ class SessionController extends Controller
             echo "Session not set";
             $this->view->loadLayout("Login");
         } else {
-            echo "it is set";
+
             $this->view->loadLayout("Dashboard");
         }
     }

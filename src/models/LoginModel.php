@@ -3,17 +3,17 @@ class LoginModel extends Model
 {
     function verifyUser($email, $pass)
     {
+        echo "checking";
         $users = parent::get("SELECT * FROM users");
 
-        var_dump($users[0]["email"]);
 
-        if ($email === $users[0]["email"] && $pass === $users[0]["password"]){
+
+        if ($email === $users[0]["email"] && $pass === $users[0]["password"]) {
             session_start();
-            $_SESSION["email"]= $email;
+            $_SESSION["email"] = $email;
 
-            header("Location: ./controllers/employeeController");
+            header("Location: ../EmployeeController/");
         }
-
     }
 
     // $userJson = file_get_contents("../../resources/users.json");
@@ -35,4 +35,3 @@ class LoginModel extends Model
     //     header("Location:../../index.php");
 
 }
-

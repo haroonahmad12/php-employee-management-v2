@@ -6,7 +6,3 @@ class EmployeeModel extends Model
         return parent::get("SELECT * FROM employees;");
     }
 }
-$emp = new EmployeeModel();
-
-
-var_dump($emp);

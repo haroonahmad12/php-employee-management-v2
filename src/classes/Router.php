@@ -13,6 +13,8 @@ class Router
 
         $url = isset($_GET['url']) ? $_GET['url'] : null;
 
+        var_dump($url);
+
         $url = rtrim($url, '/');
         $url = explode('/', $url);
 

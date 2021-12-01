@@ -12,17 +12,10 @@ class SessionController extends Controller
     {
         if (!isset($_SESSION["email"])) {
             echo "Session not set";
-
-            echo $_SESSION["email"];
             $this->view->loadLayout("Login");
-            exit();
         } else {
-            echo $_SESSION["email"];
-            echo "it is set";
 
-            header("Location: /employee/dashboard");
-
-            exit();
+            $this->view->loadLayout("Dashboard");
         }
     }
 }

@@ -1,18 +1,16 @@
 <?php
 class EmployeeController extends Controller
 {
-  function __construct()
-  {
-    parent::__construct();
-
-    // $this->loadModel("employee");
-  }
-
   function request()
   {
     $data = $this->model->getAllEmployees();
     echo json_encode($data);
   }
+  
+    function show()
+    {
+      $this->view->loadLayout("Dashboard");
+    }
 
   function addNewEmployee()
   {
@@ -21,10 +19,5 @@ class EmployeeController extends Controller
       $data = $this->model->addEmployee($newEmployee);
       echo json_encode($data);
     }
-  }
-
-  function show()
-  {
-    $this->view->loadLayout("Dashboard");
   }
 }

@@ -12,7 +12,7 @@ class LoginModel extends Model
             session_start();
             $_SESSION["email"] = $email;
 
-            header("Location: ../EmployeeController/");
+            header("Location: ../employee/show");
         }
     }
 

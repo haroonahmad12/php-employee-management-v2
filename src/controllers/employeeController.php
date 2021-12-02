@@ -5,7 +5,7 @@ class EmployeeController extends Controller
   {
     parent::__construct();
 
-    $this->loadModel("employee");
+    // $this->loadModel("employee");
   }
 
   function request()
@@ -26,5 +26,22 @@ class EmployeeController extends Controller
   function show()
   {
     $this->view->loadLayout("Dashboard");
+  }
+
+  function editing()
+  {
+    $this->view->loadLayout("Editing");
+  }
+
+  function getEmployee($id)
+  {
+
+    $employee = $this->model->getEmp($id);
+
+    echo json_encode($employee);
+  }
+
+  function updateEmployee()
+  {
   }
 }

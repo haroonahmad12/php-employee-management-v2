@@ -1,26 +1,36 @@
+function editEntry({ item }) {
+  window.location.href = `editing/${item.id}`;
+}
+
+document.addEventListener("click", () => {
+  console.log(employee);
+});
 $("#jsGrid").jsGrid({
   width: "100%",
   filtering: false,
-  editing: false,
+  editing: true,
   inserting: true,
   sorting: true,
   paging: true,
   autoload: true,
   pageSize: 15,
+  rowClick: editEntry,
+  onItemEditing: editEntry,
+
   pageButtonCount: 5,
   controller: {
     loadData: function (item) {
       const d = $.Deferred();
       $.ajax({
         type: "GET",
-        url: "employee/request",
+        url: "request",
         dataType: "json",
         data: item,
         success: function (response) {
           d.resolve(response);
         },
         error: function (xhr, exception) {
-          console.log(`Error: La query está mal.`);
+          console.log(exception);
         },
       });
       return d.promise();
@@ -28,7 +38,7 @@ $("#jsGrid").jsGrid({
     insertItem: function (item) {
       return $.ajax({
         type: "POST",
-        url: "../employee/addNewEmployee",
+        url: "addNewEmployee",
         data: item,
         success: function (response) {
           console.log("POST: ", response);

@@ -6,12 +6,7 @@ class Router
     {
         $session = new SessionController();
         $session->checkSession();
-
-
         $url = isset($_GET['url']) ? $_GET['url'] : null;
-
-        
-
         $url = rtrim($url, '/');
         $url = explode('/', $url);
 
@@ -28,7 +23,7 @@ class Router
         if (file_exists($controller_file)) {
             require_once $controller_file;
             $controller = new $controller;
-
+            $controller->loadModel($url[0]);
             if (isset($url[1])) {
                 if (method_exists($controller, $url[1])) {
                     if (isset($url[2])) {

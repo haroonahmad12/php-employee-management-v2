@@ -1,9 +1,14 @@
 <?php
 class EmployeeModel extends Model
 {
-
+    // public function __construct()
+    // {
+    //     echo "inside employeeModel";
+    // }
+    
     public function getAllEmployees()
     {
+        // echo "getall";
         return parent::get("SELECT * FROM employees;");
     }
 

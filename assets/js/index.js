@@ -13,14 +13,15 @@ $("#jsGrid").jsGrid({
       const d = $.Deferred();
       $.ajax({
           type: "GET",
-          url: "request",
+          url: "http://localhost/dashboard/phpDocs/php-employee-management-v2/employee/request",
           dataType: "json",
           data: item,
           success: function (response) {
-              d.resolve(response);
+              d.resolve(response); 
+              console.log(response);
           },
           error: function (xhr, exception) {
-              console.log(`Error: La query está mal.`);
+              console.log(exception);
           },
       });
       return d.promise();

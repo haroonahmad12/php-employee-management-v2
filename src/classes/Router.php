@@ -17,8 +17,8 @@ class Router
 
 
 
-        $controller_file =  CONTROLLERS . "$url[0]" . ".php";
-        $controller = $url[0];
+        $controller_file =  CONTROLLERS . "$url[0]" . "Controller.php";
+        $controller = $url[0] . "Controller";
 
         //$errorController = new ErrorController;
         //After instanciate the controller we check if the user is logged in

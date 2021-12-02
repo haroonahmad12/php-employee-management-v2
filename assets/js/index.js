@@ -13,11 +13,10 @@ $("#jsGrid").jsGrid({
       const d = $.Deferred();
       $.ajax({
           type: "GET",
-          url: "../employeeController/request",
+          url: "request",
           dataType: "json",
           data: item,
           success: function (response) {
-            
               d.resolve(response);
           },
           error: function (xhr, exception) {
@@ -30,7 +29,7 @@ $("#jsGrid").jsGrid({
     insertItem: function (item) {
       return $.ajax({
         type: "POST",
-        url: "../employeeController/addNewEmployee",
+        url: "../employee/addNewEmployee",
         data: item,
         success: function (response) {
           console.log("POST: ", response);
@@ -40,7 +39,7 @@ $("#jsGrid").jsGrid({
     updateItem: function (item) {
       return $.ajax({
         type: "PUT",
-        url: "../src/library/employeeController.php",
+        url: "../src/library/employee.php",
         data: { item },
         success: function (response) {
           console.log("PUT: ", response);

@@ -12,20 +12,19 @@ $("#jsGrid").jsGrid({
     loadData: function (item) {
       const d = $.Deferred();
       $.ajax({
-          type: "GET",
-          url: "request",
-          dataType: "json",
-          data: item,
-          success: function (response) {
-              d.resolve(response);
-          },
-          error: function (xhr, exception) {
-              console.log(`Error: La query está mal.`);
-          },
+        type: "GET",
+        url: "employee/request",
+        dataType: "json",
+        data: item,
+        success: function (response) {
+          d.resolve(response);
+        },
+        error: function (xhr, exception) {
+          console.log(`Error: La query está mal.`);
+        },
       });
       return d.promise();
-
-  },
+    },
     insertItem: function (item) {
       return $.ajax({
         type: "POST",

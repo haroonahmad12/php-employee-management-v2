@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
 
-  <link rel="stylesheet" href= "<?= BASE_URL ?>/assets/css/main.css">   
+  <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/main.css">   
   <link rel="stylesheet" href="<?= BASE_URL ?>/node_modules/bootstrap/dist/css/bootstrap.css">   
   <link rel="stylesheet" href="<?= BASE_URL ?>/node_modules/jsgrid/dist/jsgrid-theme.css">   
   <link rel="stylesheet" href="<?= BASE_URL ?>/node_modules/jsgrid/dist/jsgrid.css">
@@ -14,7 +14,7 @@
   <script src="<?= BASE_URL ?>/node_modules/jquery/dist/jquery.js"></script>
   <script src="<?= BASE_URL ?>/node_modules/jsgrid/dist/jsgrid.js"></script>
   <script src="<?= BASE_URL ?>/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-  <script type="module" src="<?= BASE_URL ?>/assets/js/index.js"></script>
+  <script type="text/javascript" src="<?= BASE_URL ?>/assets/js/index.js"></script>
 </head>
 
 <body class="d-flex flex-column justify-content-center align-items-center">

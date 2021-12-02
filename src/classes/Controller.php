@@ -13,11 +13,9 @@ class Controller
 
     function loadModel($name)
     {
-        require_once("src/models/{$name}Model.php");
-
+        require_once(MODELS . "{$name}Model.php");
         $name = ucfirst(strtolower($name));
         $model = $name . "Model";
-
         $this->model = new $model;
     }
 }

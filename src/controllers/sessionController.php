@@ -4,13 +4,12 @@ class SessionController extends Controller
 {
 
     function checkSession()
-    {
-        // if (!isset($_SESSION["email"])) {
-        //     echo "Session not set";
-        //     $this->view->loadLayout("Login");
-        // } else {
 
-        //     $this->view->loadLayout("Dashboard");
-        // }
+    {
+        if (!isset($_SESSION["email"])) {
+            if (!str_contains($_GET["url"], "login/render")) header("Location: login/render");
+        } else {
+            if (!str_contains($_GET["url"], "employee/show")) header("Location: employee/show");
+        }
     }
 }

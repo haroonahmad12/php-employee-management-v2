@@ -50,7 +50,7 @@ $("#jsGrid").jsGrid({
     deleteItem: function (item) {
       return $.ajax({
         type: "DELETE",
-        url: "../src/library/employeeController.php",
+        url: "../employee/addNewEmployee",
         data: { itemId: item.id },
         success: function (response) {
           console.log("DELETE: ", response);

@@ -57,11 +57,11 @@ $("#jsGrid").jsGrid({
     },
     deleteItem: function (item) {
       return $.ajax({
-        type: "DELETE",
-        url: "../src/library/employeeController.php",
-        data: { itemId: item.id },
+        type: "POST",
+        url: "../employee/delete",
+        data: item,
         success: function (response) {
-          console.log("DELETE: ", response);
+          console.log(response)
         },
       });
     },

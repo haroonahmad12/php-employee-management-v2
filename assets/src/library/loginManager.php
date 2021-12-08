@@ -12,7 +12,6 @@ function authUser($email, $pass)
         $_SESSION["name"] = $userData["users"][0]["name"];
         $_SESSION["expTime"] = 10;
         $_SESSION["time"] = time();
-
         header("Location:../dashboard.php");
     } else {
         session_start();

@@ -35,17 +35,20 @@ echo $id;
 }
 
 function deleteEmployee(string $id) {
-	$employeesArray = json_decode(file_get_contents("../../resources/employees.json"), true);
-	$newArray = array();
+	
 
-	foreach($employeesArray as $index => $employee) {
-		if($employee["id"] === $id) {
-			unset($employeesArray[$index]);
-		} else {
-			array_push($newArray, $employee);
-		}
-	}
-	file_put_contents("../../resources/employees.json", json_encode($newArray));
+
+	// $employeesArray = json_decode(file_get_contents("../../resources/employees.json"), true);
+	// $newArray = array();
+
+	// foreach($employeesArray as $index => $employee) {
+	// 	if($employee["id"] === $id) {
+	// 		unset($employeesArray[$index]);
+	// 	} else {
+	// 		array_push($newArray, $employee);
+	// 	}
+	// }
+	// file_put_contents("../../resources/employees.json", json_encode($newArray));
 }
 
 function updateEmployee(array $updateEmployee) {

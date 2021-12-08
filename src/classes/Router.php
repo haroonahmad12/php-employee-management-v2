@@ -4,14 +4,14 @@ class Router
 {
     public function __construct()
     {
-        $session = new SessionController();
-        $session->checkSession();
+
         $url = isset($_GET['url']) ? $_GET['url'] : null;
         $url = rtrim($url, '/');
         $url = explode('/', $url);
         $errorController = new ErrorController();
 
-
+        $session = new SessionController();
+        $session->checkSession();
 
         $controller_file =  CONTROLLERS . "$url[0]" . "Controller.php";
         $controller = $url[0] . "Controller";

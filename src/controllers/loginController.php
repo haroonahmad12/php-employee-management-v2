@@ -26,4 +26,10 @@ class LoginController extends Controller
         echo $email;
         $this->model->verifyUser($email, $pass);
     }
+    function logout()
+    {
+        unset($_SESSION);
+        session_destroy();
+        header("Location: " . BASE_URL . "/login/render");
+    }
 }

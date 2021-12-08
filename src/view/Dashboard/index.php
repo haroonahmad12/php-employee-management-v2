@@ -19,18 +19,18 @@
 
 <body class="d-flex flex-column justify-content-center align-items-center">
   <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
-    <a class="navbar-brand" href="#">Employee Manager</a>
+    <a class="navbar-brand" href="">Employee Manager</a>
     <div class="navbar justify-content-between w-100">
       <ul class="navbar-nav ">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="">Dashboard <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Employee</a>
+          <a class="nav-link" href="">Employee</a>
         </li>
       </ul>
       <span class="btn">
-        <a class="nav-link" href="#" id="logoutButton">
+        <a class="nav-link" href="../login/logout" id="logoutButton">
           Logout
         </a>
       </span>

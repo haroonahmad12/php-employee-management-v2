@@ -41,5 +41,6 @@ class EmployeeController extends Controller
 
   function updateEmployee()
   {
+    $response =  $this->model->update($_POST);
   }
 }

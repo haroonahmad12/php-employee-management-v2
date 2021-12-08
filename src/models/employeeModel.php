@@ -34,25 +34,19 @@ class EmployeeModel extends Model
     }
 
 
-    function updateEmployee($updateEmployee)
+    function update($update)
     {
-        // $employees = getAllEmployees(); //convierte a varible de php (array)
-        // foreach ($employees as $index => $employee) {
-        //     if ($employee['id'] == $updateEmployee['id']) {
-        //         $employees[$index] = $updateEmployee;
-        //     }
-        // }
-        // file_put_contents('../../resources/employees.json', json_encode($employees, JSON_PRETTY_PRINT));
-        // return true;
-    }
+        $id = $update["id"];
+        $name = $update["name"];
+        $email = $update["email"];
+        $age = $update["age"];
+        $street = $update["streetAddress"];
+        $city = $update["city"];
+        $state = $update["state"];
+        $postalCode = $update["postalCode"];
+        $phoneNumber = $update["phoneNumber"];
+        $query = "UPDATE employees SET id = '$id', name = '$name', email = '$email', age = '$age', street_no = '$street', city = '$city', state = '$state', postal_code = '$postalCode', phone_number = '$phoneNumber' WHERE id = $id";
 
-
-
-    function getNextIdentifier($employeesCollection)
-    {
-        // $object = array_reduce($employeesCollection, function ($a, $b) {
-        //     return $a ? ($a["id"] > $b["id"] ? $a : $b) : $b;
-        // });
-        // return $object["id"];
+        return parent::get($query);
     }
 }

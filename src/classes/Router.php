@@ -9,6 +9,7 @@ class Router
         $url = isset($_GET['url']) ? $_GET['url'] : null;
         $url = rtrim($url, '/');
         $url = explode('/', $url);
+        $errorController = new ErrorController();
 
 
 
@@ -28,11 +29,11 @@ class Router
                         $controller->{$url[1]}();
                     }
                 } else {
-                    // $errorController->showError("This action doesn't exist");
+                    $errorController->showError("This action doesn't exist");
                 }
             }
         } else {
-            // $errorController->showError("This page doesn't exist");
+            $errorController->showError("This page doesn't exist");
         }
     }
 }

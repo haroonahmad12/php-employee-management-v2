@@ -41,6 +41,18 @@
 
     <div class="table-responsive col" id="jsGrid">
     </div>
+    <?php
+    $updateMsg = isset($_GET["msg"]) ? $_GET["msg"] : "";
+
+    if ($updateMsg === "success") {
+      echo "<div class='alert-success alert-dismissible fade show bottom-right' role='alert'>
+                  <strong> Employee Updated Successfully!</strong>
+                  <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                      <span aria-hidden='true'>&times;</span>
+                  </button>
+          </div>";
+    }
+    ?>
   </main>
   <?php
   include ASSETS . '/footer.html';

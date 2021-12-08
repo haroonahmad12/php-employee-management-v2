@@ -12,6 +12,7 @@ require_once(CLASSES . "View.php");
 require_once("src/models/helpers/lib/database.php");
 // require_once("src/controllers/EmployeeController.php");
 require_once(CONTROLLERS . "SessionController.php");
+require_once(CONTROLLERS . "errorController.php");
 // require_once("src/controllers/LoginController.php");
 require_once(CLASSES . "Router.php");
 

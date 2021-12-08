@@ -2,9 +2,6 @@ function editEntry({ item }) {
   window.location.href = `editing/${item.id}`;
 }
 
-document.addEventListener("click", () => {
-  console.log(employee);
-});
 $("#jsGrid").jsGrid({
   width: "100%",
   filtering: false,
@@ -61,7 +58,7 @@ $("#jsGrid").jsGrid({
         url: "../employee/delete",
         data: item,
         success: function (response) {
-          console.log(response)
+          console.log(response);
         },
       });
     },

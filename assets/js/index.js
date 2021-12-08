@@ -49,11 +49,11 @@ $("#jsGrid").jsGrid({
     },
     deleteItem: function (item) {
       return $.ajax({
-        type: "DELETE",
-        url: "../employee/addNewEmployee",
-        data: { itemId: item.id },
+        type: "POST",
+        url: "../employee/delete",
+        data: item,
         success: function (response) {
-          console.log("DELETE: ", response);
+          console.log(response)
         },
       });
     },

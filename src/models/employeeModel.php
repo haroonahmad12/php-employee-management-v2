@@ -11,11 +11,23 @@ class EmployeeModel extends Model
         return parent::get("INSERT INTO employees values (?,?,?,?,?,?,?,?,?);", $newEmployee);
     }
 
+    public function getEmp($id)
+    {
+        $employee = NULL;
+        $data =  $this->getAllEmployees();
+        foreach ($data as $e) {
+            if ((int)$e["id"] === (int)$id) {
+                $employee =  $e;
+            }
+        }
+        return $employee;
+    }
+
 
     function deleteEmployee($id)
     {
         try {
-            $this->get("DELETE FROM employees WHERE id = ?", [$id], false);
+            $this->get("DELETE FROM employees WHERE id = ?", [$id]);
         } catch (PDOException $e) {
             return null;
         }

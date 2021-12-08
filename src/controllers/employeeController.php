@@ -12,6 +12,13 @@ class EmployeeController extends Controller
       $this->view->loadLayout("Dashboard");
     }
 
+    function getEmployee($id)
+    {
+      $employee = $this->model->getEmp($id);
+      echo json_encode($employee);
+    }
+  
+
   function addNewEmployee()
   {
     $newEmployee = [$_POST["id"], $_POST["name"], $_POST["email"], $_POST["age"], $_POST["street_no"], $_POST["city"], $_POST["state"], $_POST["postal_code"], $_POST["phone_number"]];
@@ -19,5 +26,9 @@ class EmployeeController extends Controller
       $data = $this->model->addEmployee($newEmployee);
       echo json_encode($data);
     }
+  }
+
+  function delete(){
+    $this->model->deleteEmployee($_POST['id']);
   }
 }

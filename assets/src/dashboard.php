@@ -1,6 +1,7 @@
 <!-- TODO Main view or Employees Grid View here is where you get when logged here there's the grid of employees -->
 
-<?php include '../assets/head.html';
+<?php 
+include '../assets/head.html';
 	require_once("./library/sessionHelper.php");
 	session_start();
 	timeExpires();

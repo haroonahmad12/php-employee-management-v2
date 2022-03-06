@@ -66,13 +66,11 @@ To download or install this project in your local computer, either clone the rep
 This project could be used to manage employee information.
 ```
 
-## Based on
+## Created By
 
 This repository is based on a past delivery from master's students:
 
-👤 **Víctor Martínez**
-
-👤 **Ismael Vázquez**
+Haroon Ahmad
 
 ---
 

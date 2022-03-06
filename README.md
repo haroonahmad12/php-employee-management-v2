@@ -68,8 +68,8 @@ This project could be used to manage employee information.
 
 ## Created By
 
-Haroon
-Daniella
-Josep
+ - Haroon
+ - Daniella
+ - Josep
 
 ---

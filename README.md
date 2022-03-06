@@ -68,10 +68,8 @@ This project could be used to manage employee information.
 
 ## Created By
 
-This repository is based on a past delivery from master's students:
-
-Haroon Ahmad
+Haroon
+Daniella
+Josep
 
 ---
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
